@@ -31,8 +31,7 @@ class ViewController: UIViewController
     }()
     
     // TODO:
-    // load time
-    // save to disk
+    // - cache to disk
     
     override func viewDidLoad()
     {
