@@ -21,22 +21,17 @@ typealias PFStepQueryHandler = (String, String) -> Void
 class StepManager
 {
     // TODO: Figure out the syntax so we can write something nice like this:
-    class func totalStepsWalkedToday(handler: PFStepQueryHandler!)
+    class func totalStepsWalkedToday(handler:PFStepQueryHandler!)
     {
         var totalSteps:String = "0"
         
         if CMStepCounter.isStepCountingAvailable()
         {
-            let pedometer:CMStepCounter             = CMStepCounter() // CMPedometer doesn't return anything when we query it in iOS 8 beta 1
+            let pedometer:CMStepCounter             = CMStepCounter() // CMPedometer doesn't seem to return anything when we query it in iOS 8 beta 1
             let lengthFormatter:NSLengthFormatter   = NSLengthFormatter()
             
-            // Calculate the start date
-            let now:NSDate                  = NSDate()
-            let calendar:NSCalendar         = NSCalendar.currentCalendar()
-            let flags: NSCalendarUnit       = .DayCalendarUnit | .MonthCalendarUnit | .YearCalendarUnit
-            var components:NSDateComponents = calendar.components(flags, fromDate: now)
-            components.hour                 = 0
-            let startDate:NSDate            = calendar.dateFromComponents(components)
+            let now:NSDate          = NSDate()
+            let startDate:NSDate    = NSCalendar.currentCalendar().startOfDayForDate(now)
             
             pedometer.queryStepCountStartingFrom(startDate, to: NSDate(), toQueue: NSOperationQueue.mainQueue(), withHandler: { data, error in
                 
