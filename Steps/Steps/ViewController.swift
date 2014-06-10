@@ -10,15 +10,21 @@ import UIKit
 
 class ViewController: UIViewController
 {
-    @lazy var label: UILabel = {
+    @lazy var background:UIImageView = {
+        let background:UIImageView = UIImageView(image: UIImage(named: "background"))
+        return background
+    }()
+    
+    @lazy var label:UILabel = {
         let label:UILabel   = UILabel(frame: self.view.bounds)
         label.textColor     = UIColor.whiteColor()
-        label.font          = UIFont(name: "HelveticaNeue-UltraLight", size: 60)
+        label.font          = UIFont(name: "HelveticaNeue-UltraLight", size: 80)
         label.textAlignment = NSTextAlignment.Center
+        label.numberOfLines = 2
         return label
     }()
     
-    @lazy var spinner: UIActivityIndicatorView = {
+    @lazy var spinner:UIActivityIndicatorView = {
         let spinner:UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.White)
         spinner.center = self.view.center
         return spinner
@@ -29,7 +35,9 @@ class ViewController: UIViewController
         super.viewDidLoad()
         
         navigationController.navigationBarHidden = true
-        self.view.backgroundColor = UIColor.redColor()
+        
+        // Add the background
+        self.view.addSubview(background)
         
         // Add the label
         self.view.addSubview(label)
