@@ -29,7 +29,8 @@ class TodayViewController: UIViewController
         super.didReceiveMemoryWarning()
     }
     
-    func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)!) {
+    func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)!)
+    {
         // Perform any setup necessary in order to update the view.
 
         // If an error is encoutered, use NCUpdateResult.Failed
