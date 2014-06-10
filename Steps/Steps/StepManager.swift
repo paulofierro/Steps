@@ -74,7 +74,7 @@ class StepManager
                     // TODO: Return the error
                     println("ERROR: \(error)")
                     totalSteps = "-1"
-                    handler("-1", "")
+                    handler("-1", "💩")
                 }
                 
             })
@@ -82,7 +82,7 @@ class StepManager
         else
         {
             // TODO: Return an error stating that step counting is not available
-            handler("-2", "")
+            handler("-2", "💩")
         }
     }
 }
