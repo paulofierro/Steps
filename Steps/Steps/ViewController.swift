@@ -30,6 +30,10 @@ class ViewController: UIViewController
         return spinner
     }()
     
+    // TODO:
+    // load time
+    // save to disk
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -47,9 +51,9 @@ class ViewController: UIViewController
         self.view.addSubview(spinner)
         
         // Get the total steps
-        StepManager.totalStepsWalkedToday({data in
+        StepManager.totalStepsWalkedToday({data, emoji in
             
-            self.label.text = data
+            self.label.text = data + "\n" + emoji
             self.spinner.stopAnimating()
         })
     }

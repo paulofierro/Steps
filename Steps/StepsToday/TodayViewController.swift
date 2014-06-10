@@ -19,8 +19,8 @@ class TodayViewController: UIViewController
         super.viewWillAppear(animated)
         
         // Get the total steps
-        StepManager.totalStepsWalkedToday({data in
-            self.label.text = "Today you've walked \(data) steps."
+        StepManager.totalStepsWalkedToday({data, emoji in
+            self.label.text = "You've walked \(data) steps. \(emoji)"
         })
     }
     

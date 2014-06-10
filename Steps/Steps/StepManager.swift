@@ -15,7 +15,7 @@ import CoreMotion
 *  Discussion:
 *    Typedef of block to be invoked when the step count query is completed.
 */
-typealias PFStepQueryHandler = (String) -> Void
+typealias PFStepQueryHandler = (String, String) -> Void
 
 
 class StepManager
@@ -38,23 +38,48 @@ class StepManager
             components.hour                 = 0
             let startDate:NSDate            = calendar.dateFromComponents(components)
             
-            pedometer.queryStepCountStartingFrom(startDate, to: NSDate(), toQueue: NSOperationQueue(), withHandler: { data, error in
+            pedometer.queryStepCountStartingFrom(startDate, to: NSDate(), toQueue: NSOperationQueue.mainQueue(), withHandler: { data, error in
                 
                 if !error
                 {
-                    let numberFormatter:NSNumberFormatter = NSNumberFormatter()
-                    numberFormatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
-                    totalSteps = numberFormatter.stringFromNumber(data)
+                    let numberFormatter:NSNumberFormatter   = NSNumberFormatter()
+                    numberFormatter.numberStyle             = NSNumberFormatterStyle.DecimalStyle
+                    totalSteps                              = numberFormatter.stringFromNumber(data)
                     
                     println("Steps taken today: \(totalSteps)")
-                    handler(totalSteps)
+                    
+                    var emoji:String
+                    
+                    if data > 10000
+                    {
+                        emoji = "😁👍👍👍💪"
+                        
+                    }
+                    else if data > 7500
+                    {
+                        emoji = "😃👍👍"
+                    }
+                    else if data > 5000
+                    {
+                        emoji = "😏👍"
+                    }
+                    else if data > 2500
+                    {
+                        emoji = "😐"
+                    }
+                    else
+                    {
+                        emoji = "😩"
+                    }
+                    
+                    handler(totalSteps, emoji)
                 }
                 else
                 {
                     // TODO: Return the error
                     println("ERROR: \(error)")
                     totalSteps = "-1"
-                    handler("-1")
+                    handler("-1", "")
                 }
                 
             })
@@ -62,7 +87,7 @@ class StepManager
         else
         {
             // TODO: Return an error stating that step counting is not available
-            handler("-2")
+            handler("-2", "")
         }
     }
 }
