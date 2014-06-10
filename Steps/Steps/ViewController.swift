@@ -30,9 +30,6 @@ class ViewController: UIViewController
         return spinner
     }()
     
-    // TODO:
-    // - cache to disk
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
