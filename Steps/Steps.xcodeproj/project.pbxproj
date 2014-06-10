@@ -12,7 +12,29 @@
 		3AB3F5C01946694C0077124B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB3F5BF1946694C0077124B /* Images.xcassets */; };
 		3AB3F5D919466B1B0077124B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB3F5D819466B1B0077124B /* CoreMotion.framework */; };
 		3AB3F5F3194676320077124B /* StepManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3F5F2194676320077124B /* StepManager.swift */; };
+		3AE856391946985600B6F7C0 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB3F5D5194669A80077124B /* NotificationCenter.framework */; };
+		3AE8563E1946985600B6F7C0 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE8563D1946985600B6F7C0 /* TodayViewController.swift */; };
+		3AE856401946985600B6F7C0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AE8563F1946985600B6F7C0 /* MainInterface.storyboard */; };
+		3AE856431946985600B6F7C0 /* com.paulofierro.Steps.StepsToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3AE856381946985600B6F7C0 /* com.paulofierro.Steps.StepsToday.appex */; };
+		3AE856491946997300B6F7C0 /* StepManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3F5F2194676320077124B /* StepManager.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3AE856411946985600B6F7C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AB3F5AB1946694C0077124B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AE856371946985600B6F7C0;
+			remoteInfo = StepsToday;
+		};
+		3AE856441946985600B6F7C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AB3F5AB1946694C0077124B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AE856371946985600B6F7C0;
+			remoteInfo = StepsToday;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		3AB3F5F1194670420077124B /* Embed App Extensions */ = {
@@ -21,6 +43,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				3AE856431946985600B6F7C0 /* com.paulofierro.Steps.StepsToday.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -36,6 +59,10 @@
 		3AB3F5D5194669A80077124B /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		3AB3F5D819466B1B0077124B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		3AB3F5F2194676320077124B /* StepManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepManager.swift; sourceTree = "<group>"; };
+		3AE856381946985600B6F7C0 /* com.paulofierro.Steps.StepsToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = com.paulofierro.Steps.StepsToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AE8563C1946985600B6F7C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AE8563D1946985600B6F7C0 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		3AE8563F1946985600B6F7C0 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +74,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3AE856351946985600B6F7C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AE856391946985600B6F7C0 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -54,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				3AB3F5B51946694C0077124B /* Steps */,
+				3AE8563A1946985600B6F7C0 /* StepsToday */,
 				3AB3F5D7194669B00077124B /* Frameworks */,
 				3AB3F5B41946694C0077124B /* Products */,
 			);
@@ -63,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				3AB3F5B31946694C0077124B /* Steps.app */,
+				3AE856381946985600B6F7C0 /* com.paulofierro.Steps.StepsToday.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,6 +133,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3AE8563A1946985600B6F7C0 /* StepsToday */ = {
+			isa = PBXGroup;
+			children = (
+				3AE8563D1946985600B6F7C0 /* TodayViewController.swift */,
+				3AE8563F1946985600B6F7C0 /* MainInterface.storyboard */,
+				3AE8563B1946985600B6F7C0 /* Supporting Files */,
+			);
+			path = StepsToday;
+			sourceTree = "<group>";
+		};
+		3AE8563B1946985600B6F7C0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3AE8563C1946985600B6F7C0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -111,11 +166,30 @@
 			buildRules = (
 			);
 			dependencies = (
+				3AE856421946985600B6F7C0 /* PBXTargetDependency */,
+				3AE856451946985600B6F7C0 /* PBXTargetDependency */,
 			);
 			name = Steps;
 			productName = Steps;
 			productReference = 3AB3F5B31946694C0077124B /* Steps.app */;
 			productType = "com.apple.product-type.application";
+		};
+		3AE856371946985600B6F7C0 /* StepsToday */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AE856461946985600B6F7C0 /* Build configuration list for PBXNativeTarget "StepsToday" */;
+			buildPhases = (
+				3AE856341946985600B6F7C0 /* Sources */,
+				3AE856351946985600B6F7C0 /* Frameworks */,
+				3AE856361946985600B6F7C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StepsToday;
+			productName = StepsToday;
+			productReference = 3AE856381946985600B6F7C0 /* com.paulofierro.Steps.StepsToday.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -127,6 +201,9 @@
 				ORGANIZATIONNAME = "jadehopper ltd";
 				TargetAttributes = {
 					3AB3F5B21946694C0077124B = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					3AE856371946985600B6F7C0 = {
 						CreatedOnToolsVersion = 6.0;
 					};
 				};
@@ -145,6 +222,7 @@
 			projectRoot = "";
 			targets = (
 				3AB3F5B21946694C0077124B /* Steps */,
+				3AE856371946985600B6F7C0 /* StepsToday */,
 			);
 		};
 /* End PBXProject section */
@@ -155,6 +233,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AB3F5C01946694C0077124B /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AE856361946985600B6F7C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AE856401946985600B6F7C0 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,7 +257,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3AE856341946985600B6F7C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AE856491946997300B6F7C0 /* StepManager.swift in Sources */,
+				3AE8563E1946985600B6F7C0 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3AE856421946985600B6F7C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AE856371946985600B6F7C0 /* StepsToday */;
+			targetProxy = 3AE856411946985600B6F7C0 /* PBXContainerItemProxy */;
+		};
+		3AE856451946985600B6F7C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AE856371946985600B6F7C0 /* StepsToday */;
+			targetProxy = 3AE856441946985600B6F7C0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3AB3F5CD1946694C0077124B /* Debug */ = {
@@ -273,6 +381,32 @@
 			};
 			name = Release;
 		};
+		3AE856471946985600B6F7C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = StepsToday/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "com.paulofierro.Steps.$(TARGET_NAME:rfc1034identifier)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3AE856481946985600B6F7C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = StepsToday/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "com.paulofierro.Steps.$(TARGET_NAME:rfc1034identifier)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -290,6 +424,15 @@
 			buildConfigurations = (
 				3AB3F5D01946694C0077124B /* Debug */,
 				3AB3F5D11946694C0077124B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AE856461946985600B6F7C0 /* Build configuration list for PBXNativeTarget "StepsToday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AE856471946985600B6F7C0 /* Debug */,
+				3AE856481946985600B6F7C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
