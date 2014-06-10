@@ -1,6 +1,6 @@
 Steps
 =====
-A simple iOS 8 app written in Swift that loads the number of steps walked so far today and displays them in the app and in the Notification Center as a "Today Extension".
+A simple iOS 8 app written in Swift that loads the number of steps taken so far today and displays them in the app and in the Notification Center as a "Today Extension".
 
 <p align="center" >
   <img src="https://raw.githubusercontent.com/jadehopper/Steps/master/Screenshots/notification.png" alt="Notification Center" title="Notification Center" width="320">
