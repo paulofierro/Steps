@@ -50,20 +50,20 @@ class StepManager
                     
                     var emoji:String
                     
-                    if data > 10000
+                    if data >= 10000
                     {
                         emoji = "😁👍👍👍💪"
                         
                     }
-                    else if data > 7500
+                    else if data >= 7500
                     {
                         emoji = "😃👍👍"
                     }
-                    else if data > 5000
+                    else if data >= 5000
                     {
                         emoji = "😏👍"
                     }
-                    else if data > 2500
+                    else if data >= 2500
                     {
                         emoji = "😐"
                     }
